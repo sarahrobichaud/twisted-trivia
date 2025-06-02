@@ -1,0 +1,53 @@
+<div id="player-setup" class="flex flex-col items-center justify-center min-h-[60vh]">
+    <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 text-indigo-700">Player Setup</h1>
+            <p class="text-gray-600">Enter a username to continue</p>
+        </div>
+        
+        <form class="flex flex-col gap-4" id="username-form">
+            <div class="flex flex-col gap-2">
+                <input type="text" id="username" name="username" placeholder="Player Name" required
+                    class="text-center py-4 px-6 text-4xl font-bold tracking-widest bg-white border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+            </div>
+            
+            <button id="submit"
+                class="brand-primary text-white font-bold py-4 px-6 rounded-xl text-xl hover:bg-indigo-700 transition">
+                Continue
+            </button>
+        </form>
+    </div>
+</div> 
+
+<div id="lobby" class="hidden flex flex-col items-center justify-center min-h-[60vh]">
+    <div class="w-full max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 text-indigo-700">Join Code: {{game.joinCode}}</h1>
+            <p class="text-gray-600">Waiting for players to join...</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Quiz Info Section -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4">{{game.quiz.title}}</h2>
+                <ul class="list-disc list-inside">
+                    <li class="text-brand-primary">{{game.questions.length}} questions</li>
+                </ul>
+            </div>
+
+            <!-- Players List Section -->
+            <div class="">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Players</h2>
+                <ul id="player-list">
+                </ul>
+            </div>
+        </div>
+
+        <div id="start-game-btn" class="mt-8 text-center">
+            <button id="startGame" 
+                class="brand-primary text-white font-bold py-4 px-8 rounded-xl text-xl hover:bg-indigo-700 transition">
+                Start Game
+            </button>
+        </div>
+    </div>
+</div>

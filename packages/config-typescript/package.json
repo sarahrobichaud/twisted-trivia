@@ -1,0 +1,11 @@
+{
+	"name": "@synced-focus/config-typescript",
+	"version": "1.0.0",
+	"exports": {
+		"./tsconfig.base": "./tsconfig.base.json",
+		"./tsconfig.library": "./tsconfig.library.json",
+		"./tsconfig.node": "./tsconfig.node.json",
+		"./tsconfig.react": "./tsconfig.react.json"
+	},
+	"license": "MIT"
+}

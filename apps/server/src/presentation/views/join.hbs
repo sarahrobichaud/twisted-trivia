@@ -1,0 +1,23 @@
+<div class="flex flex-col items-center justify-center min-h-[60vh]">
+    <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 text-indigo-700">Join a Game</h1>
+            <p class="text-gray-600">Enter the game code to join</p>
+        </div>
+        
+        <form class="flex flex-col gap-4" id="join-form">
+            <div class="flex flex-col gap-2">
+                <input type="text" name="code" placeholder="Game Code" required
+                    class="text-center py-4 px-6 text-4xl font-bold tracking-widest bg-white border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+            </div>
+            
+            <button type="submit" 
+                class="brand-primary text-white font-bold py-4 px-6 rounded-xl text-xl hover:bg-indigo-700 transition">
+                Join Game
+            </button>
+        </form>
+    </div>
+</div> 
+
+<script src="/js/join-script.js" type="module"></script>
+

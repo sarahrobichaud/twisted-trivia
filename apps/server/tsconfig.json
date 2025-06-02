@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+        "target": "ES2022",
+		"strict": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": "src",
+        "module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ESNext", "DOM"],
+		"esModuleInterop": true,
+        "allowJs": true,
+        "typeRoots": ["./src/types", "./src/lib/bayfront/types"],
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"],
+			"@routes/*": ["src/routes/*"],
+			"@utils/*": ["src/utils/*"],
+			"@domain/*": ["src/domain/*"],
+			"@infra/*": ["src/infrastructure/*"],
+			"@bayfront/*": ["src/infrastructure/lib/bayfront/*"],
+			"@app/*": ["src/application/*"],
+			"@presentation/*": ["src/presentation/*"],
+			"@models/*": ["src/models/*"],
+			"@controllers/*": ["src/controllers/*"],
+			"@middlewares/*": ["src/middlewares/*"]
+		},
+	},
+	"tsc-alias": {
+		"resolveFullPaths": true,
+		"verbose": false
+	},
+	"include": ["src/**/*", "src/views/**/*"],
+	"exclude": ["node_modules", "dist"]
+}

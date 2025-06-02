@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ESNext", "DOM"],
+		"esModuleInterop": true,
+		"baseUrl": "."
+	}
+}

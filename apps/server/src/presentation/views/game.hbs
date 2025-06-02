@@ -1,0 +1,89 @@
+<div class="flex items-start justify-between border-b border-gray-200 pb-4 my-8">
+    <div class="flex flex-col">
+        <h1 class="text-5xl font-bold" id="game-title"></h1>
+        <div class="text-xl py-4 flex gap-4">
+        <span id="question-count"></span>
+        <span id="join-code-separator" class="hidden">|</span>
+        <span id="join-code-container" class="hidden">Join with code <span class="font-bold bg-blue-500 text-white px-2 rounded-md" id="join-code"></span></span>
+        </div>
+    </div>
+    <div class="flex gap-4 items-center">
+        <span id="time-left" classs="text-2xl font-bold"></span> <span id="active-phase" class="text-2xl font-bold"></span> 
+    </div>
+</div>
+
+<section id="waiting-room" class="hidden">
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <h2 class="text-2xl font-bold">Players</h2>
+            <ul id="player-list">
+            </ul>
+        </div>
+
+        <div id="host-panel" class="hidden w-full">
+            <button id="start-game-btn" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Start Game</button>
+        </div>
+        <div id="player-lobby-panel" class="w-full">
+            <p>Waiting for host to start the game...</p>
+        </div>
+    </div>
+</section>
+
+<div id="question-view-container" class="my-8">
+
+    <span id="question-content" class="text-5xl font-bold"></span>
+
+    <section id="question-view-player" class="hidden">
+        <div id="question-answers-container" class="grid grid-cols-2 gap-4">
+            <button id="player-answer-btn-1" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Answer 1</button>
+            <button id="player-answer-btn-2" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Answer 2</button>
+            <button id="player-answer-btn-3" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Answer 3</button>
+            <button id="player-answer-btn-4" class="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Answer 4</button>
+        </div>
+        <div id="player-answer-result-container" class="hidden flex flex-col gap-4 items-center">
+            <div id="player-answer-result-text" class="text-2xl font-bold"></div>
+            <div id="player-answer-result-multiplier" class="text-xl text-primary-500"></div>    
+        </div>
+    </section>
+
+    <section id="question-view-host" class="hidden">
+        <div id="question-content" class="flex flex-col gap-4 items-center">
+            <div id="answer-count"></div>
+            <div id="question-number"></div>
+        </div>
+    </section>
+</div>
+
+<section id="cooldown-view" class="hidden">
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <h2 class="text-2xl font-bold">Scores</h2>
+            <ul id="cooldown-player-list">
+            </ul>
+        </div>
+        <div>
+            <div id="player-cooldown-panel" class="w-full flex flex-col gap-4">
+                <h2 class="text-2xl font-bold">Correct Answer</h2>
+                <span id="cooldown-correct-answer"></span>
+                <span id="cooldown-player-text" class="my-4">Waiting for host to continue...</span>
+            </div>
+            <div id="host-cooldown-panel" class="hidden w-full">
+                <h3 class="text-xl font-bold my-4">Host Actions</h3>
+                <button id="cooldown-next-question-btn" class="hidden bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">Next Question</button>
+                <button id="cooldown-end-game-btn" class="hidden bg-blue-800 text-white font-bold p-2 rounded-md w-full hover:bg-blue-600 hover:cursor-pointer">End Game</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="end-view" class="hidden">
+    <div class="flex flex-col gap-4 items-center">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold my-2">Final Scores</h1>
+            <span id="end-game-reason" class="text-xl text-blue-500"></span>
+        </div>
+        <ul id="end-player-list">
+        </ul>
+    </div>
+
+</section>
