@@ -1,7 +1,5 @@
 # Quiz Cove
 
-> NOTE: Rebuilding the client, not public yet
-
 ### Objective
 
 Create a simplified kahoot-like experience.
