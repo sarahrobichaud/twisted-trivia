@@ -87,14 +87,9 @@ export class GameController extends AppController {
 
         player.username = username;
 
-        const clientURL = new URL(process.env.CLIENT_URL!);
-
-        clientURL.pathname = `/app/room/${game.id}`;
-
-        clientURL.searchParams.set("code", player.accessToken);
-
         return res.success({
-            url: clientURL.toString()
+            gameID: game.id,
+            accessToken: player.accessToken
         }, "Requested game connection URL successfully");
     }
 
